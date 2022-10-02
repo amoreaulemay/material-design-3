@@ -11,7 +11,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "vite",
+    "push": "func() { git add --all && git commit -m \"$1\" && git push; }; func",
+    "dev": "tsc & vite && kill $!",
     "build": "tsc && vite build"
   },
   "dependencies": {
