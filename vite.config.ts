@@ -8,6 +8,7 @@ export default defineConfig({
       '@md': path.resolve(__dirname, './src/md'),
       '@components': path.resolve(__dirname, './src/components'),
       '@utils': path.resolve(__dirname, './src/utils'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
     },
   },
   build: {

@@ -2,8 +2,8 @@ import {html, css} from "lit";
 import {classMap} from "lit/directives/class-map.js";
 import {component} from "haunted";
 import styles from "@styles";
-import {useStyles} from "../../hooks/useStyles";
-import {MdcIcon} from "../mdc-icon";
+import {useStyles} from "@hooks";
+import {MdcIcon} from "@components/mdc-icon";
 
 declare type FabSize = "small" | "large" | undefined;
 declare type FabColorMapping = "surface" | "secondary" | "tertiary" | undefined;

@@ -2,7 +2,7 @@ import {MdcIcon} from "@components";
 import styles from "@styles";
 import {component} from "haunted";
 import {css, html} from "lit";
-import {useStyles} from "../../hooks/useStyles";
+import {useStyles} from "@hooks";
 import {classMap} from "lit/directives/class-map.js";
 
 declare type FabColorMapping = "surface" | "secondary" | "tertiary" | undefined;

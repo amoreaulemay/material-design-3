@@ -3,6 +3,7 @@ export * from "./mdc-elevated-button";
 export * from "./mdc-fab";
 export * from "./mdc-fab-extended";
 export * from "./mdc-filled-button";
+export * from "./mdc-filled-icon-button";
 export * from "./mdc-filled-tonal-button";
 export * from "./mdc-icon";
 export * from "./mdc-outlined-button";
