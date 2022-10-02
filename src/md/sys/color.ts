@@ -1,4 +1,4 @@
-import {Colors, cssRender, css} from "../../utils";
+import {Colors, cssRender, css} from "@utils";
 import ref from "../ref";
 
 export const color: Colors = {

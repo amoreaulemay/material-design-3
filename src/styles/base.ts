@@ -1,5 +1,6 @@
-import md from "../md";
-import {css} from "../utils";
+import md from "@md";
+import {css} from "@utils";
+import {icons} from "./icons";
 
 export const base = [
     md.ref.palette[css](),
@@ -8,4 +9,5 @@ export const base = [
     md.sys.typescale,
     md.sys.elevation,
     md.sys.state,
+    icons,
 ];

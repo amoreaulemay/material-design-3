@@ -1,5 +1,5 @@
 import {css, CSSResult, unsafeCSS} from "lit";
-import {AlphaColor, DynamicAlphaColor} from "../../utils";
+import {DynamicAlphaColor} from "@utils";
 import {color} from "./color";
 
 const s = (v: string) => unsafeCSS(`0 0 var(${v})`);

@@ -1,4 +1,4 @@
-import { cssRender, css } from "../../utils";
+import { cssRender, css } from "@utils";
 import ref from "../ref";
 export const color = {
     primary: {

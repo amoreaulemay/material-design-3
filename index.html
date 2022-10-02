@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lit App Lit Element Simple Starter Kit</title>
+    <title>Material Design Components v3.0</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        body {
+            --margin: 8px;
+
+            box-sizing: content-box;
+            height: calc(100vh - (2 * var(--margin)));
+            width: calc(100vw - (2 * var(--margin)));
+            background: #FFFBFE;
+            overflow: hidden;
+            margin: var(--margin);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #1C1B1F;
+            }
+        }
+    </style>
 </head>
 <body>
     <mdc-elevated-button>Test</mdc-elevated-button>
+    <mdc-filled-button>Test</mdc-filled-button>
+    <mdc-filled-tonal-button>Test</mdc-filled-tonal-button>
+    <mdc-outlined-button>Test</mdc-outlined-button>
+    <mdc-text-button>Test</mdc-text-button>
+    <mdc-fab icon="edit"></mdc-fab>
+    <mdc-fab-extended icon="edit" title="compose"></mdc-fab-extended>
     <script type="module" src="/src/index.ts"></script>
 </body>
 </html>
