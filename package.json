@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "push": "func() { git add --all && git commit -m \"$1\" && git push; }; func",
-    "dev": "tsc & vite && kill $!",
+    "dev": "vite",
     "build": "tsc && vite build"
   },
   "dependencies": {
