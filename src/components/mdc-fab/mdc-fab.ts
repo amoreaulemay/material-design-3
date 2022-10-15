@@ -2,8 +2,8 @@ import {html, css} from "lit";
 import {classMap} from "lit/directives/class-map.js";
 import {component} from "haunted";
 import styles from "@styles";
-import {useStyles} from "../../hooks/useStyles";
-import {MdcIcon} from "../mdc-icon";
+import {useStyles} from "@hooks";
+import {MdcIcon} from "@components/mdc-icon";
 
 declare type FabSize = "small" | "large" | undefined;
 declare type FabColorMapping = "surface" | "secondary" | "tertiary" | undefined;
@@ -65,6 +65,10 @@ export function MdcFab(this: HTMLElement, {
           
           .fab:hover {
             box-shadow: var(--md-sys-elevation4);
+          }
+          
+          .fab:focus {
+            outline: none;
           }
           
           /* Color Mapping */
@@ -132,7 +136,7 @@ export function MdcFab(this: HTMLElement, {
     ]);
 
     return html`
-        <div role="button" class=${classMap({
+        <div tabindex="0" role="button" class=${classMap({
             'fab': true,
             'large': size === "large",
             'small': size === "small",

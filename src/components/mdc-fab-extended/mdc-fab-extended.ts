@@ -2,7 +2,7 @@ import {MdcIcon} from "@components";
 import styles from "@styles";
 import {component} from "haunted";
 import {css, html} from "lit";
-import {useStyles} from "../../hooks/useStyles";
+import {useStyles} from "@hooks";
 import {classMap} from "lit/directives/class-map.js";
 
 declare type FabColorMapping = "surface" | "secondary" | "tertiary" | undefined;
@@ -56,6 +56,10 @@ export function MdcFabExtended(this: HTMLElement, {
 
           .fab-extended:hover {
             box-shadow: var(--md-sys-elevation4);
+          }
+          
+          .fab-extended:focus {
+            outline: none;
           }
           
           /* Title */
@@ -132,7 +136,7 @@ export function MdcFabExtended(this: HTMLElement, {
     ]);
 
     return html`
-        <div role="button" class=${classMap({
+        <div tabindex="0" role="button" class=${classMap({
             'fab-extended': true,
             'lowered': lowered ?? false,
             'full': full ?? false,
