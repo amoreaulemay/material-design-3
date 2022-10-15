@@ -67,6 +67,10 @@ export function MdcFab(this: HTMLElement, {
             box-shadow: var(--md-sys-elevation4);
           }
           
+          .fab:focus {
+            outline: none;
+          }
+          
           /* Color Mapping */
           .fab.surface {
             --mdc-fab-background: var(--md-sys-color-surface);
@@ -132,7 +136,7 @@ export function MdcFab(this: HTMLElement, {
     ]);
 
     return html`
-        <div role="button" class=${classMap({
+        <div tabindex="0" role="button" class=${classMap({
             'fab': true,
             'large': size === "large",
             'small': size === "small",

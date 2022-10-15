@@ -17,6 +17,11 @@
             background: #FFFBFE;
             overflow: hidden;
             margin: var(--margin);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -34,6 +39,9 @@
     <mdc-text-button>Test</mdc-text-button>
     <mdc-fab icon="edit"></mdc-fab>
     <mdc-fab-extended icon="edit" title="compose"></mdc-fab-extended>
+    <mdc-filled-icon-button icon="favorite"></mdc-filled-icon-button>
+    <mdc-filled-tonal-icon-button icon="favorite"></mdc-filled-tonal-icon-button>
+    <mdc-standard-icon-button icon="star"></mdc-standard-icon-button>
     <script type="module" src="/src/index.ts"></script>
 </body>
 </html>

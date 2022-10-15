@@ -7,7 +7,7 @@ import {
 } from "@components/mdc-base-icon-button";
 import styles from "@styles";
 
-export function MdcFilledIconButton(this: HTMLElement, props: MDCIconButtonProps) {
+export function MdcFilledTonalIconButton(this: HTMLElement, props: MDCIconButtonProps) {
     useStyles(this, [
         ...styles.base,
         styles.iconButton,
@@ -15,13 +15,13 @@ export function MdcFilledIconButton(this: HTMLElement, props: MDCIconButtonProps
           :host {
             /* Inactive State */
             --mdc-icon-btn-background: var(--md-sys-color-surface-variant);
-            --mdc-icon-btn-color: var(--md-sys-color-primary);
-            --mdc-icon-btn-state-layer: var(--md-sys-color-primary);
+            --mdc-icon-btn-color: var(--md-sys-color-on-surface-variant);
+            --mdc-icon-btn-state-layer: var(--md-sys-color-on-surface-variant);
             
             /* Active State */
-            --mdc-icon-btn-background-active: var(--md-sys-color-primary);
-            --mdc-icon-btn-color-active: var(--md-sys-color-on-primary);
-            --mdc-icon-btn-state-layer-active: var(--md-sys-color-on-primary);
+            --mdc-icon-btn-background-active: var(--md-sys-color-secondary-container);
+            --mdc-icon-btn-color-active: var(--md-sys-color-on-secondary-container);
+            --mdc-icon-btn-state-layer-active: var(--md-sys-color-on-secondary-container);
           }
         `,
     ]);
@@ -30,9 +30,9 @@ export function MdcFilledIconButton(this: HTMLElement, props: MDCIconButtonProps
 }
 
 customElements.define(
-    'mdc-filled-icon-button',
+    'mdc-filled-tonal-icon-button',
     component<HTMLElement & MDCIconButtonProps>(
-        MdcFilledIconButton,
+        MdcFilledTonalIconButton,
         {
             observedAttributes: [
                 'icon',

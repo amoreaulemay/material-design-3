@@ -58,6 +58,10 @@ export function MdcFabExtended(this: HTMLElement, {
             box-shadow: var(--md-sys-elevation4);
           }
           
+          .fab-extended:focus {
+            outline: none;
+          }
+          
           /* Title */
           .fab-extended > .title {
             color: var(--mdc-fab-icon-color);
@@ -132,7 +136,7 @@ export function MdcFabExtended(this: HTMLElement, {
     ]);
 
     return html`
-        <div role="button" class=${classMap({
+        <div tabindex="0" role="button" class=${classMap({
             'fab-extended': true,
             'lowered': lowered ?? false,
             'full': full ?? false,
