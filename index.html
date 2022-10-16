@@ -22,6 +22,7 @@
             justify-content: center;
             align-items: center;
             gap: 8px;
+            overflow-y: scroll;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -42,6 +43,12 @@
     <mdc-filled-icon-button icon="favorite"></mdc-filled-icon-button>
     <mdc-filled-tonal-icon-button icon="favorite"></mdc-filled-tonal-icon-button>
     <mdc-standard-icon-button icon="star"></mdc-standard-icon-button>
+    <mdc-bottom-app-bar>
+        <mdc-standard-icon-button icon="search" slot="icons"></mdc-standard-icon-button>
+        <mdc-standard-icon-button icon="delete" slot="icons"></mdc-standard-icon-button>
+        <mdc-standard-icon-button icon="more_vert" slot="overflow-menu"></mdc-standard-icon-button>
+        <mdc-fab icon="add" slot="fab"></mdc-fab>
+    </mdc-bottom-app-bar>
     <script type="module" src="/src/index.ts"></script>
 </body>
 </html>
