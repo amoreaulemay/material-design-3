@@ -49,8 +49,6 @@ export function MdcBottomAppBar(
     fabs.forEach(fab => {
       fab.setAttribute('lowered', 'true')
       fab.shadowRoot?.querySelector<HTMLDivElement>('.fab') && (fab.shadowRoot.querySelector<HTMLDivElement>('.fab')!.style.margin = '0px')
-
-      console.log(fab.shadowRoot?.querySelector<HTMLDivElement>('.fab'))
     })
 
     // Removes icons if more than maximum
