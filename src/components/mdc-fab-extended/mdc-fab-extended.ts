@@ -135,8 +135,12 @@ export function MdcFabExtended(this: HTMLElement, {
         `,
     ]);
 
+  const handleClick = (event: MouseEvent) => {
+    (event.target as HTMLElement).blur()
+  }
+
     return html`
-        <div tabindex="0" role="button" class=${classMap({
+        <div tabindex="0" role="button" @click=${handleClick} class=${classMap({
             'fab-extended': true,
             'lowered': lowered ?? false,
             'full': full ?? false,
