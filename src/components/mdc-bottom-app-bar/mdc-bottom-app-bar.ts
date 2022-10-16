@@ -22,7 +22,6 @@ export function MdcBottomAppBar(
         padding-inline: 16px;
         box-shadow: var(--md-sys-elevation2);
         background-color: var(--md-sys-color-surface);
-
         bottom: 0;
         left: 0;
         right: 0;
@@ -33,18 +32,6 @@ export function MdcBottomAppBar(
         align-items: center;
         justify-content: flex-start;
         gap: 8px;
-      }
-
-      ::slotted(*[slot="icons"]) {
-        *:nth-child(n+4) {
-          display: none;
-        }
-      }
-
-      ::slotted(*[slot="overflow-menu"]) {
-        *:nth-child(n+1) {
-          display: none;
-        }
       }
     `,
   ])
@@ -58,8 +45,11 @@ export function MdcBottomAppBar(
     overflowMenu.forEach(e => e.setAttribute('selectable', 'false'))
     icons.forEach(e => e.setAttribute('selectable', 'false'))
 
-    // Lowers the fab
-    fabs.forEach(fab => fab.setAttribute('lowered', 'true'))
+    // Lowers the fab && removes margin
+    fabs.forEach(fab => {
+      fab.setAttribute('lowered', 'true')
+      fab.shadowRoot?.querySelector<HTMLDivElement>('.fab') && (fab.shadowRoot.querySelector<HTMLDivElement>('.fab')!.style.margin = '0px')
+    })
 
     // Removes icons if more than maximum
     fabs.forEach((fab, index) => {
