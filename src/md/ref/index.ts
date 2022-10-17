@@ -1,7 +1,7 @@
-import {palette} from "./palette";
-import {typeface} from "./typeface";
+import {palette} from './palette'
+import {typeface} from './typeface'
 
 export default {
-    palette,
-    typeface,
+  palette,
+  typeface,
 }

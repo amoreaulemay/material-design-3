@@ -1,2 +1,2 @@
-export * from "./colorTypes";
-export * from "./rename";
+export * from './colorTypes'
+export * from './rename'

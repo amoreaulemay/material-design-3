@@ -1,1 +1,1 @@
-export {MdcFilledButton} from "./mdc-filled-button";
+export {MdcFilledButton} from './mdc-filled-button'

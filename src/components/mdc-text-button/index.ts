@@ -1,1 +1,1 @@
-export {MdcTextButton} from "./mdc-text-button";
+export {MdcTextButton} from './mdc-text-button'

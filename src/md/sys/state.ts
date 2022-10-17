@@ -1,4 +1,4 @@
-import {css} from "lit";
+import {css} from 'lit'
 
 export const state = css`
   :host {
@@ -10,4 +10,4 @@ export const state = css`
     /* Hover state layer opacity */
     --md-sys-state-hover-state-layer-opacity: 0.07999999821186066;
   }
-`;
+`

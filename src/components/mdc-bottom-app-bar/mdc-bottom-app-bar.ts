@@ -1,11 +1,9 @@
-import { component, useEffect } from 'haunted'
-import { css, html }            from 'lit'
-import { useStyles }            from '@hooks'
-import styles                   from '@styles'
+import {component, useEffect} from 'haunted'
+import {css, html} from 'lit'
+import {useStyles} from '@hooks'
+import styles from '@styles'
 
-export function MdcBottomAppBar(
-  this: HTMLElement,
-) {
+export function MdcBottomAppBar(this: HTMLElement) {
   useStyles(this, [
     ...styles.base,
     css`
@@ -42,11 +40,11 @@ export function MdcBottomAppBar(
     const fabs = this.querySelectorAll<HTMLElement>('*[slot="fab"]')
 
     // Makes icon button non-selectable
-    overflowMenu.forEach(e => e.setAttribute('selectable', 'false'))
-    icons.forEach(e => e.setAttribute('selectable', 'false'))
+    overflowMenu.forEach((e) => e.setAttribute('selectable', 'false'))
+    icons.forEach((e) => e.setAttribute('selectable', 'false'))
 
     // Lowers the fab && removes margin
-    fabs.forEach(fab => {
+    fabs.forEach((fab) => {
       fab.setAttribute('lowered', 'true')
       fab.shadowRoot?.querySelector<HTMLDivElement>('.fab') && (fab.shadowRoot.querySelector<HTMLDivElement>('.fab')!.style.margin = '0px')
     })
@@ -77,17 +75,16 @@ export function MdcBottomAppBar(
         }
       })
     }
-
   }, [])
 
   return html`
-      <div class="mdc-bottom-app-bar">
-          <div class="icons-wrapper">
-              <slot name="overflow-menu"></slot>
-              <slot name="icons"></slot>
-          </div>
-          <slot name="fab"></slot>
+    <div class="mdc-bottom-app-bar">
+      <div class="icons-wrapper">
+        <slot name="overflow-menu"></slot>
+        <slot name="icons"></slot>
       </div>
+      <slot name="fab"></slot>
+    </div>
   `
 }
 
