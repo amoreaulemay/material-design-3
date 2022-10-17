@@ -1,1 +1,1 @@
-export {MdcBaseButton} from "./mdc-base-button";
+export {MdcBaseButton} from './mdc-base-button'

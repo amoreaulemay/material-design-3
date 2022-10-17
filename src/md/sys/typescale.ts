@@ -1,4 +1,4 @@
-import {css} from "lit";
+import {css} from 'lit'
 
 export const typescale = css`
   :host {
@@ -514,4 +514,4 @@ export const typescale = css`
     text-transform: var(--md-sys-typescale-display-large-text-transform);
     text-decoration: var(--md-sys-typescale-display-large-text-decoration);
   }
-`;
+`

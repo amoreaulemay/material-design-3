@@ -1,27 +1,21 @@
-import { MdcIcon }   from '@components'
-import styles        from '@styles'
-import { component } from 'haunted'
-import { css, html } from 'lit'
-import { useStyles } from '@hooks'
-import { classMap }  from 'lit/directives/class-map.js'
+import {MdcIcon} from '@components'
+import styles from '@styles'
+import {component} from 'haunted'
+import {css, html} from 'lit'
+import {useStyles} from '@hooks'
+import {classMap} from 'lit/directives/class-map.js'
 
-declare type FabColorMapping = 'surface' | 'secondary' | 'tertiary' | undefined;
+declare type FabColorMapping = 'surface' | 'secondary' | 'tertiary' | undefined
 
 export interface MDCFabExtendedProps {
-  title: string;
-  icon?: string;
-  colorMapping: FabColorMapping;
-  lowered?: boolean;
-  full?: boolean;
+  title: string
+  icon?: string
+  colorMapping: FabColorMapping
+  lowered?: boolean
+  full?: boolean
 }
 
-export function MdcFabExtended(this: HTMLElement, {
-  title,
-  icon,
-  colorMapping,
-  lowered,
-  full,
-}: MDCFabExtendedProps) {
+export function MdcFabExtended(this: HTMLElement, {title, icon, colorMapping, lowered, full}: MDCFabExtendedProps) {
   useStyles(this, [
     ...styles.base,
     css`
@@ -97,7 +91,7 @@ export function MdcFabExtended(this: HTMLElement, {
       /* State layer */
 
       .fab-extended::before {
-        content: "";
+        content: '';
         position: absolute;
         height: 100%;
         width: 100%;
@@ -137,41 +131,44 @@ export function MdcFabExtended(this: HTMLElement, {
   ])
 
   const handleClick = (event: MouseEvent) => {
-    (event.target as HTMLElement).blur()
+    ;(event.target as HTMLElement).blur()
   }
 
   return html`
-      <div tabindex="0" role="button" @click=${handleClick} class=${classMap({
-          'fab-extended': true,
-          'lowered': lowered ?? false,
-          'full': full ?? false,
-          'surface': colorMapping === 'surface',
-          'secondary': colorMapping === 'secondary',
-          'tertiary': colorMapping === 'tertiary',
-      })}>
-          ${icon && html`${MdcIcon({
-              name: icon,
-              size: 24,
-              color: 'var(--mdc-fab-icon-color)',
-          })}`}
-          <div class="title">${title}</div>
-      </div>
+    <div
+      tabindex="0"
+      role="button"
+      @click=${handleClick}
+      class=${classMap({
+        'fab-extended': true,
+        lowered: lowered ?? false,
+        full: full ?? false,
+        surface: colorMapping === 'surface',
+        secondary: colorMapping === 'secondary',
+        tertiary: colorMapping === 'tertiary',
+      })}
+    >
+      ${icon &&
+      html`${MdcIcon({
+        name: icon,
+        size: 24,
+        color: 'var(--mdc-fab-icon-color)',
+      })}`}
+      <div class="title">${title}</div>
+    </div>
   `
 }
 
 customElements.define(
   'mdc-fab-extended',
-  component<HTMLElement & MDCFabExtendedProps>(
-    MdcFabExtended,
-    {
-      observedAttributes: [
-        // @ts-ignore
-        'color-mapping',
-        'title',
-        'icon',
-        'lowered',
-        'full',
-      ],
-    },
-  ),
+  component<HTMLElement & MDCFabExtendedProps>(MdcFabExtended, {
+    observedAttributes: [
+      // @ts-ignore
+      'color-mapping',
+      'title',
+      'icon',
+      'lowered',
+      'full',
+    ],
+  })
 )

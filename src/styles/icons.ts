@@ -1,4 +1,4 @@
-import {css} from "lit";
+import {css} from 'lit'
 
 export const icons = css`
   :host {
@@ -6,7 +6,7 @@ export const icons = css`
     --mdc-icon-weight: 400;
     --mdc-icon-grade: 0;
     --mdc-icon-optical-size: 48;
-    
+
     --mdc-icon-size: 48px;
   }
 
@@ -18,7 +18,7 @@ export const icons = css`
   }
 
   .material-symbols-outlined {
-    font-family: 'Material Symbols Outlined',sans-serif;
+    font-family: 'Material Symbols Outlined', sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: var(--mdc-icon-size);
@@ -33,4 +33,4 @@ export const icons = css`
     -webkit-font-smoothing: antialiased;
     font-variation-settings: 'FILL' var(--mdc-icon-fill), 'wght' var(--mdc-icon-weight), 'GRAD' var(--mdc-icon-grade), 'opsz' var(--mdc-icon-optical-size);
   }
-`;
+`

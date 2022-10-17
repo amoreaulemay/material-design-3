@@ -1,1 +1,1 @@
-export {MdcOutlinedButton} from "./mdc-outlined-button";
+export {MdcOutlinedButton} from './mdc-outlined-button'

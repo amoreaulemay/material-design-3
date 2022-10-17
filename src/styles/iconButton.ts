@@ -1,5 +1,5 @@
-import {css} from "lit";
-import md from "@md";
+import {css} from 'lit'
+import md from '@md'
 
 export const iconButton = css`
   * {
@@ -53,7 +53,7 @@ export const iconButton = css`
   }
 
   button::before {
-    content: "";
+    content: '';
     position: absolute;
     height: 100%;
     width: 100%;
@@ -81,4 +81,4 @@ export const iconButton = css`
   button:active::before {
     opacity: var(--md-sys-state-pressed-state-layer-opacity);
   }
-`;
+`

@@ -1,1 +1,1 @@
-export * from "./mdc-base-icon-button";
+export * from './mdc-base-icon-button'

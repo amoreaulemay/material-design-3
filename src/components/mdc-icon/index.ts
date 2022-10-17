@@ -1,1 +1,1 @@
-export {MdcIcon} from "./mdc-icon";
+export {MdcIcon} from './mdc-icon'

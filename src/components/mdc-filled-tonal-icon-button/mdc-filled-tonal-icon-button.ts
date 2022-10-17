@@ -1,8 +1,8 @@
-import { css, html }                             from 'lit'
-import { component }                             from 'haunted'
-import { useStyles }                             from '@hooks'
-import { MdcBaseIconButton, MDCIconButtonProps } from '@components/mdc-base-icon-button'
-import styles                                    from '@styles'
+import {css, html} from 'lit'
+import {component} from 'haunted'
+import {useStyles} from '@hooks'
+import {MdcBaseIconButton, MDCIconButtonProps} from '@components/mdc-base-icon-button'
+import styles from '@styles'
 
 export function MdcFilledTonalIconButton(this: HTMLElement, props: MDCIconButtonProps) {
   useStyles(this, [
@@ -28,15 +28,7 @@ export function MdcFilledTonalIconButton(this: HTMLElement, props: MDCIconButton
 
 customElements.define(
   'mdc-filled-tonal-icon-button',
-  component<HTMLElement & MDCIconButtonProps>(
-    MdcFilledTonalIconButton,
-    {
-      observedAttributes: [
-        'icon',
-        'selected',
-        'disabled',
-        'selectable',
-      ],
-    },
-  ),
+  component<HTMLElement & MDCIconButtonProps>(MdcFilledTonalIconButton, {
+    observedAttributes: ['icon', 'selected', 'disabled', 'selectable'],
+  })
 )

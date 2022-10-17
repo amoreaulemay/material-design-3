@@ -1,8 +1,8 @@
-import { css, html }                             from 'lit'
-import { component }                             from 'haunted'
-import { useStyles }                             from '@hooks'
-import { MdcBaseIconButton, MDCIconButtonProps } from '@components/mdc-base-icon-button'
-import styles                                    from '@styles'
+import {css, html} from 'lit'
+import {component} from 'haunted'
+import {useStyles} from '@hooks'
+import {MdcBaseIconButton, MDCIconButtonProps} from '@components/mdc-base-icon-button'
+import styles from '@styles'
 
 export function MdcStandardIconButton(this: HTMLElement, props: MDCIconButtonProps) {
   useStyles(this, [
@@ -31,15 +31,7 @@ export function MdcStandardIconButton(this: HTMLElement, props: MDCIconButtonPro
 
 customElements.define(
   'mdc-standard-icon-button',
-  component<HTMLElement & MDCIconButtonProps>(
-    MdcStandardIconButton,
-    {
-      observedAttributes: [
-        'icon',
-        'selected',
-        'disabled',
-        'selectable',
-      ],
-    },
-  ),
+  component<HTMLElement & MDCIconButtonProps>(MdcStandardIconButton, {
+    observedAttributes: ['icon', 'selected', 'disabled', 'selectable'],
+  })
 )

@@ -1,1 +1,1 @@
-export * from "./mdc-fab";
+export * from './mdc-fab'

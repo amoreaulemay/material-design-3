@@ -1,4 +1,4 @@
-import {css} from "lit";
+import {css} from 'lit'
 
 export const button = css`
   button {
@@ -37,22 +37,22 @@ export const button = css`
       color: var(--mdc-button-disabled-text-dark);
     }
   }
-  
+
   button:hover {
     box-shadow: var(--mdc-hover-elevation);
   }
-  
+
   button:focus {
     box-shadow: var(--mdc-focus-elevation);
   }
-  
+
   button:active {
     box-shadow: var(--mdc-pressed-elevation);
   }
 
   button::before {
     border-radius: calc(var(--mdc-button-height) / 2);
-    content: "";
+    content: '';
     height: 100%;
     opacity: 0;
     position: absolute;
@@ -76,10 +76,10 @@ export const button = css`
     opacity: var(--md-sys-state-pressed-state-layer-opacity);
   }
 
-  ::slotted(*[slot="icon"]) {
+  ::slotted(*[slot='icon']) {
     margin-left: -6px;
     height: 18px;
     width: 18px;
     display: inline-flex;
   }
-`;
+`
